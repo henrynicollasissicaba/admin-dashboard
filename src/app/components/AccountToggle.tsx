@@ -4,7 +4,9 @@ import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 export default function AccountToggle(){
     return(
         <div className="border-b border-stone-300 mb-4 mt-2 pb-4">
-            <button className="flex p-0.5 hover:bg-stone-300 rounded transition-colors relative gap-2 w-full items-center">
+            <button 
+                className="flex p-0.5 hover:bg-stone-300 rounded transition-colors relative gap-2 w-full items-center cursor-pointer"
+            >
                 <Image 
                     src="/ashwin-santiago.jpg"
                     alt="avatar"
