@@ -12,7 +12,7 @@ const tableRows = [
 
 export default function RecentTransactions(){
     return(
-        <div className="col-span-12 p-4 rounded border border-stone-300">
+        <div className="col-span-12 p-4 rounded border border-stone-300 overflow-x-auto">
             <div className="mb-4 flex items-center justify-between">
                 <h3 className="flex items-center gap-1.5 font-medium">
                     <FiDollarSign /> Últimas Transações
@@ -37,10 +37,10 @@ const TableHead = () => {
     return(
         <thead>
             <tr className="text-sm font-normal text-stone-500">
-                <th className="text-start p-1.5">Id de usuário</th>
-                <th className="text-start p-1.5">Assinatura</th>
-                <th className="text-start p-1.5">Data</th>
-                <th className="text-start p-1.5">Preço</th>
+                <th className="text-start min-w-[175px] p-1.5">Id de usuário</th>
+                <th className="text-start min-w-[175px] p-1.5">Assinatura</th>
+                <th className="text-start min-w-[175px] p-1.5">Data</th>
+                <th className="text-start min-w-[175px] p-1.5">Preço</th>
                 <th className="w-8"></th>
             </tr>
         </thead>
@@ -66,13 +66,6 @@ const TableRow = () => {
                     <td className="p-1.5">{plan}</td>
                     <td className="p-1.5">{date}</td>
                     <td className="p-1.5">{price}</td>
-
-                    <button
-                        className="hover:bg-stone-200 transition-colors grid place-content-center rounded text-sm size-8
-                        cursor-pointer"
-                    >
-                        <FiMoreHorizontal />
-                    </button>
                 </tr>
             ))}
         </>

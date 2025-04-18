@@ -24,8 +24,8 @@ export default function TopBar(){
         <div
             className="border-b px-4 mb-4 mt-2 pb-4 border-stone-200"
         >
-            <div className="flex items-center justify-between p-0.5">
-                <div>
+            <div className="flex flex-col gap-2.5 md:flex-row md:items-center md:justify-between p-0.5">
+                <div className="flex flex-col gap-0.5">
                     <span className="text-sm font-bold block">
                         {getCurrentTime()}, Ashwin!
                     </span>
@@ -36,7 +36,7 @@ export default function TopBar(){
                 
                 <button
                     className="flex text-sm items-center gap-2 bg-stone-100 transition-colors hover:bg-violet-100
-                    hover:text-violet-700 px-3 py-1.5 rounded cursor-pointer"
+                    hover:text-violet-700 px-3 py-1.5 rounded cursor-pointer w-fit"
                 >
                     <FiCalendar />
                     <span>Últimos 6 meses</span>
