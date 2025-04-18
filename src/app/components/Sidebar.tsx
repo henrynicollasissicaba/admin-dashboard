@@ -13,10 +13,10 @@ export default function Sidebar(){
     return(
         <>
             <button 
-                className="md:hidden sticky top-4 ml-auto px-4 py-1"
+                className="md:hidden fixed top-4 right-4 ml-auto p-2 z-10 bg-stone-800 rounded-full"
                 onClick={() => setIsOpenMenu(!isOpenMenu)}
             >
-                {isOpenMenu ? <FiX className="size-6" /> : <FiMenu className="size-6" />}
+                {isOpenMenu ? <FiX className="size-6 text-white" /> : <FiMenu className="size-6 text-white" />}
             </button>
             <div className={`fixed md:sticky bg-stone-100 z-10 h-full top-0 md:top-4
                 ${isOpenMenu ? "left-0" : "-left-full"} transition-all`}>
