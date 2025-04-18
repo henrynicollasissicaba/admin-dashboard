@@ -1,4 +1,4 @@
-import { FiArrowUpRight, FiDollarSign, FiMoreHorizontal } from "react-icons/fi";
+import { FiArrowUpRight, FiDollarSign } from "react-icons/fi";
 
 const tableRows = [
     { customerId: "#923927", plan: "Pro 1 mês", date: "02/08/2025", price: "R$ 49,90", order: 1 },
