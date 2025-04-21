@@ -9,7 +9,7 @@ export default function Plan(){
                     <p className="text-stone-500">Pague conforme usar</p>
                 </div>
                 <button
-                    className="px-2 py-1.5 font-medium bg-stone-200 hover:bg-stone-300 transition-colors rounded"
+                    className="px-2 py-1.5 font-medium bg-stone-200 hover:bg-stone-300 transition-colors rounded cursor-pointer"
                 >
                     Suporte
                 </button>

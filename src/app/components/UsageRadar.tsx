@@ -54,7 +54,7 @@ export default function UsageRadar(){
                 </h3>
             </div>
 
-            <div className="h-64 px-4">
+            <div className="h-48 md:h-64 px-4">
                 <ResponsiveContainer width="100%" height="100%">
                 <RadarChart cx="50%" cy="50%" outerRadius="80%" data={data}>
                     <PolarGrid />

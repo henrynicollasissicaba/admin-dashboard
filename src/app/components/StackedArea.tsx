@@ -57,7 +57,7 @@ export default function StackedArea(){
                 </h3>
             </div>
 
-            <div className="h-64 p-4">
+            <div className="h-48 md:h-64 p-4">
                 <ResponsiveContainer width="100%" height="100%">
                     <AreaChart
                         width={500}

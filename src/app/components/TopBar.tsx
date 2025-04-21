@@ -1,24 +1,28 @@
+"use client"
+
+import { useEffect, useState } from "react"
 import { FiCalendar } from "react-icons/fi"
 
 export default function TopBar(){
-    const getCurrentTime = () => {
-        const currentTime = new Date().getUTCHours()
+    const [greeting, setGreeting] = useState("")
+    const [currentDate, setCurrentDate] = useState("")
 
-        if(currentTime < 12) return "Bom dia"
-        if(currentTime > 12 && currentTime < 18) return "Boa tarde"
-        if(currentTime > 18) return "Boa noite"
-    }
+    useEffect(() => {
+        const hour = new Date().getHours()
 
-    const getCurrentDate = () => {
-        const currentDate = new Date().toLocaleDateString("pt-BR", {
+        if(hour >= 0 && hour < 12) setGreeting("Bom dia")
+        if(hour >= 12 && hour <= 18) setGreeting("Boa tarde")
+        else setGreeting("Boa noite")
+
+        const formattedDate = new Date().toLocaleDateString("pt-BR", {
             day: "numeric",
             month: "long",
             year: "numeric",
-            weekday: "long",
+            weekday: "long"
         })
 
-        return currentDate
-    }
+        setCurrentDate(formattedDate)
+    }, [])
 
     return(
         <div
@@ -27,10 +31,10 @@ export default function TopBar(){
             <div className="flex flex-col gap-2.5 md:flex-row md:items-center md:justify-between p-0.5">
                 <div className="flex flex-col gap-0.5">
                     <span className="text-sm font-bold block">
-                        {getCurrentTime()}, Ashwin!
+                        {greeting}, Ashwin!
                     </span>
                     <span className="text-xs block text-stone-500">
-                        {getCurrentDate()}
+                        {currentDate}
                     </span>
                 </div>
                 
