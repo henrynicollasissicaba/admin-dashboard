@@ -10,9 +10,15 @@ export default function TopBar(){
     useEffect(() => {
         const hour = new Date().getHours()
 
-        if(hour >= 0 && hour < 12) setGreeting("Bom dia")
-        if(hour >= 12 && hour <= 18) setGreeting("Boa tarde")
-        else setGreeting("Boa noite")
+        if(hour >= 0 && hour < 12){
+            setGreeting("Bom dia")
+
+        } else if(hour >= 12 && hour < 18){
+            setGreeting("Boa tarde")
+
+        } else {
+            setGreeting("Boa noite")
+        }
 
         const formattedDate = new Date().toLocaleDateString("pt-BR", {
             day: "numeric",
